@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <style>
+                .Button{
+                    width: 100px;
+                    height: 100px;
+                    color: white;
+                    margin: 4px 2px;
+                    text-align: center;
+                    text-decoration: none;
+                    display:inline-block;
+                    font-size: medium;
+                    border-radius: 0;
+                    border: 1px solid white;
+                    transition-duration: 0.4s;
+                    padding: 0;
+                    align-items: center;
+                }
+                .TeaButton{
+                    background-color: rgb(245, 220, 4);
+                    color: black;
+                    width: 300px; /*Forces the button to be square*/
+                    height: 300px;
+                }
+                .TeaButton:hover{
+                    background-color: white;
+                    color: black
+                }
+                .HotChocolateButton{
+                    background-color: rgb(131, 91, 60);
+                    color: black;
+                    width: 300px; /*Forces the button to be square*/
+                    height: 300px;
+                }
+                .HotChocolateButton:hover{
+                    background-color: white;
+                    color: black
+                }
+                .BlackCoffeeButton{
+                    background-color: rgb(43, 8, 8);
+                    color: white;
+                    width: 300px; /*Forces the button to be square*/
+                    height: 300px;
+                }
+                .BlackCoffeeButton:hover{
+                    background-color: white;
+                    color: black
+                }
+                .MilkCoffeeButton{
+                    background-color:rgb(193, 159, 119);
+                    color: white;
+                    width: 300px; /*Forces the button to be square*/
+                    height: 300px;
+                }
+                .MilkCoffeeButton:hover{
+                    background-color: white;
+                    color: black
+                }
+                </style>
+            <div class="center">
+                <button class="TeaButton" name="button_value" value="LemonTea"><a href="Preparing">Lemon Tea</a></button>
+                <button class="HotChocolateButton" name="button_value" value="HotChocolate">Hot Chocolate</button>
+                <button class="BlackCoffeeButton" name="button_value" value="BlackCoffee">Black Coffee</button>
+                <button class="MilkCoffeeButton" name="button_value" value="MilkCoffee">Milk Coffee</button>
+            </div>
+        </form>
+    </body>
+</html>
