@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
     <body>
-        {{Text}}
+        <script> /* uses JavaScript for dynamic text updates */
+            window.onload = function() {
+                var instructionsfrompython = JSON.parse('{{instructionarray | safe}}');
+                var index = 0;
+
+                function updateText(){
+                    if (index < instructionsfrompython.length){
+                        document.getElementById('text-element').innerText = instructionsfrompython[index];
+                        index++; /* increments index by 1 */
+                    }
+                }
+                setInterval(updateText, 2000) /* Updates the text every 2 seconds (2000ms) */
+            }
+        </script>
+        <h1 id="text-element">{{ Text }}</h1>
     </body>
 </html>
