@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Preparing</title>
+    </head>
     <body>
         <script> /* uses JavaScript for dynamic text updates */
             window.onload = function() {
                 var instructionsfrompython = JSON.parse('{{instructionarray | safe}}');
+                var imagesfrompython = JSON.parse('{{ imagearray | safe}}')
                 var index = 0;
 
                 function updateText(){
                     if (index < instructionsfrompython.length){
                         document.getElementById('text-element').innerText = instructionsfrompython[index];
+                        document.getElementById('image').src = imagesfrompython[index];
+                        document.getElementById('image').style.display = "block"
                         index++; /* increments index by 1 */
+                    } else {
+                        setTimeout(returnToHome, 2000) /* calls returnToHome after 2 seconds */
                     }
+                }
+                function returnToHome(){
+                    window.location.href = "{{ url_for('HomePage') }}" /* Returns to the home page */
                 }
                 setInterval(updateText, 2000) /* Updates the text every 2 seconds (2000ms) */
             }
         </script>
         <h1 id="text-element">{{ Text }}</h1>
+        <img id="image" src="">
     </body>
 </html>
