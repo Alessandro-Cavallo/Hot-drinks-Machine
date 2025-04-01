@@ -6,26 +6,44 @@
     <body>
         <form action="{{ url_for('Preparing')}}" method="post">
             <style>
+                .center{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                }
                 .Button{
-                    width: 100px;
-                    height: 100px;
+                    width: 300px;
+                    height: 300px;
                     color: white;
                     margin: 4px 2px;
                     text-align: center;
                     text-decoration: none;
-                    display:inline-block;
+                    display:flex;
+                    flex-direction: column;
                     font-size: medium;
                     border-radius: 0;
                     border: 1px solid white;
                     transition-duration: 0.4s;
                     padding: 0;
                     align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                .Button img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
                 .TeaButton{
                     background-color: rgb(245, 220, 4);
                     color: black;
                     width: 300px; /*Forces the button to be square*/
                     height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    flex-direction: column;
                 }
                 .TeaButton:hover{
                     background-color: white;
@@ -36,6 +54,11 @@
                     color: black;
                     width: 300px; /*Forces the button to be square*/
                     height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    flex-direction: column;
                 }
                 .HotChocolateButton:hover{
                     background-color: white;
@@ -46,6 +69,11 @@
                     color: white;
                     width: 300px; /*Forces the button to be square*/
                     height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    flex-direction: column;
                 }
                 .CoffeeButton:hover{
                     background-color: white;
@@ -54,9 +82,9 @@
 
                 </style>
             <div class="center">
-                <button class="TeaButton" name="button_value" value="LemonTea">Lemon Tea</button>
-                <button class="HotChocolateButton" name="button_value" value="HotChocolate">Hot Chocolate</button>
-                <button class="CoffeeButton" name="button_value" value="Coffee">Coffee</button>
+                <button class="TeaButton" name="button_value" value="LemonTea"><img src="static/Images/LemonTea.jpg"><span>Lemon Tea</span></button>
+                <button class="HotChocolateButton" name="button_value" value="HotChocolate"><img src="static/Images/Hot_Chocolate.jpg"><span>Hot Chocolate</span></button>
+                <button class="CoffeeButton" name="button_value" value="Coffee"><img src="static/Images/Coffee.jpg"><span>Coffee</span></button>
             </div>
         </form>
     </body>

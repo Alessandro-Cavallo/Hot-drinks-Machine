@@ -6,20 +6,33 @@
     <body>
         <form action="{{ url_for('Preparing')}}" method="post">
             <style>
+                .center{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                }
                 .Button{
-                    width: 100px;
-                    height: 100px;
+                    width: 300px;
+                    height: 300px;
                     color: white;
                     margin: 4px 2px;
                     text-align: center;
                     text-decoration: none;
-                    display:inline-block;
+                    display:flex;
+                    flex-direction: column;
                     font-size: medium;
                     border-radius: 0;
                     border: 1px solid white;
                     transition-duration: 0.4s;
                     padding: 0;
                     align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                .Button img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 
                 .CoffeeButton{
@@ -27,16 +40,35 @@
                     color: white;
                     width: 300px; /*Forces the button to be square*/
                     height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    flex-direction: column;
                 }
                 .CoffeeButton:hover{
                     background-color: white;
                     color: black
                 }
-
+                .HomeButton{
+                    background-color: rgb(53, 16, 238);
+                    color: rgb(255, 255, 255);
+                    width: 200px; 
+                    height: 100px;
+                }
+                .HomeButton:hover{
+                    background-color: white;
+                    color: black
+                }
                 </style>
             <div class="center">
-                <button class="CoffeeButton" name="button_value" value="Coffee_Americano">Americano</button>
+                <button class="CoffeeButton" name="button_value" value="Coffee_Americano"><img src="static/Images/Americano.jpg">Americano</button>
+                <button class="CoffeeButton" name="button_value" value="Coffee_Latte"><img src="static/Images/Latte.jpg">Latte</button>
             </div>
+            <div class="center">
+                <button class="HomeButton" name="button_value" value="Home">Back</button>
+            </div>
+            </form>
         </form>
     </body>
 </html>
